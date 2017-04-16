@@ -31,6 +31,7 @@ The goals / steps of this project are the following:
  
 ### Training Data visualisation: Car and Noncar image ###
 ![alt text][image1]
+
 I extracted the training/testing data from the image files. I balanced the cars and non cars images on both training and testing data set(GTI* files). In addition, the time- series car images are sorted in the time series order using the image tag names. I then split the first 80% for training and bottom 20% for testing. So the training data is different from the testing data to avoid over-fitting. The code for this is in BuildImageNames() function in project_library/LoadData.py.
 
 
@@ -50,9 +51,9 @@ I then settled with the paramaters with this resut above.
 I only use SVM for the classification. The model was trained on the GTI data set
  
 Data summary: Balanced data set
-training car:  7032, training not car:  7174
-testing car:  1760, testing not car:  1794
-Number of training data:  14206
+training car:  7032, training not car:  7174  
+testing car:  1760, testing not car:  1794  
+Number of training data:  14206  
 Number of testing data:   3554
 
 The accuracy was about 0.98-0.99 on the defalut SVM parameters
@@ -68,9 +69,9 @@ Scales = [1.3, 1.5, 2.0]
 These scalings are estimated from the sizes of the vehicles that might appear on the images and we want to track them. 
 To get some idea on the sizes and scaling by the trained image of 64x64 pixels 
 
-car size big:    width = 200 pixels, height = 100 pixels  →  scale x = 3.1, scale y = 1.6
-car size medium: width = 140 pixels, height =   65 pixels  →  scale x = 2.2, scale y = 1.0
-car size small:  width = 100 pixels, height =   50 pixels  →  scale x = 1.6, scale y = 0.8
+car size big:    width = 200 pixels, height = 100 pixels  →  scale x = 3.1, scale y = 1.6  
+car size medium: width = 140 pixels, height =   65 pixels  →  scale x = 2.2, scale y = 1.0  
+car size small:  width = 100 pixels, height =   50 pixels  →  scale x = 1.6, scale y = 0.8  
 
 The trained imaged size (cars) can be varied. So the scales was set according to these ranges. 
 The above scales of 1.3, 1.5, 2.0 provided the good result in the detection for this implemented solution.
