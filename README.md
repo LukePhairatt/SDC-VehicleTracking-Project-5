@@ -50,7 +50,7 @@ I then settled with the paramaters with this resut above.
 ### Linear SVM 
 I only use SVM for the classification. The model was trained on the GTI data set
  
-Data summary: Balanced data set
+Data summary: Balanced data set  
 training car:  7032, training not car:  7174  
 testing car:  1760, testing not car:  1794  
 Number of training data:  14206  
@@ -59,11 +59,12 @@ Number of testing data:   3554
 The accuracy was about 0.98-0.99 on the defalut SVM parameters
 
 ### Sliding Window Search: Hog sub-sampling
-I used the settings as follows:
-cells_per_pixel = 8
-cell_per_block  = 2 
-cells_per_step = 2 (100*6/8 = 75% overlap = 0.75*64 = 48 pixels or 16 pixels apart)
-Search area: ystart = 360, ystop  = 640
+I used the settings as follows:  
+
+cells_per_pixel = 8  
+cell_per_block  = 2  
+cells_per_step = 2 (100*6/8 = 75% overlap = 0.75*64 = 48 pixels or 16 pixels apart)  
+Search area: ystart = 360, ystop  = 640  
 Scales = [1.3, 1.5, 2.0] 
 
 These scalings are estimated from the sizes of the vehicles that might appear on the images and we want to track them. 
